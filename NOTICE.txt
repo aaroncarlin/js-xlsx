@@ -1,0 +1,1 @@
+- This fork is to fix couple of compiler errors with Angular CLI
