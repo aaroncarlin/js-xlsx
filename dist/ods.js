@@ -7,11 +7,10 @@ var ODS = {};
 var get_utils = function() {
 	if(typeof XLSX !== 'undefined') return XLSX.utils;
 	if(typeof module !== "undefined" && typeof require !== 'undefined') try {
-		return require('../' + 'xlsx').utils;
-	} catch(e) {
 		return require('./' + 'xlsx').utils;
+	} catch(e) {
+		throw new Error("Cannot find XLSX utils");
 	}
-	throw new Error("Cannot find XLSX utils");
 };
 var has_buf = (typeof Buffer !== 'undefined');
 
